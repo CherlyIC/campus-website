@@ -1,0 +1,121 @@
+/* ===== RESET & GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: darkgrey;
+    background-color: lightgrey;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+    background-color: goldenrod;
+    color: navy;
+    padding: 6px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+    background-color: navy;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO & NAME */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-brand img {
+    border-radius: 50%;
+}
+
+/* NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 12px;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: goldenrod;
+    color: navy;
+    border-radius: 4px;
+}
+
+/* ===== DROPDOWN MENU ===== */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: navy;
+    list-style: none;
+    min-width: 180px;
+    z-index: 999;
+    border-top: 3px solid goldenrod;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    color: white;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: goldenrod;
+    color: navy;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ===== RESPONSIVE - TABLET & MOBILE ===== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .nav-brand span {
+        font-size: 13px;
+    }
+}
