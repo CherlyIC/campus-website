@@ -9,14 +9,23 @@
 </head>
 
 <body>
+  <div class="top-bar">
+    <span>March Intake 2026 is now open for applications!</span>
+    <span>Contact: +250 724796988</span>
+  </div>
    <nav class="navbar">
     <div class="nav-brand">
       <img src="images/Auca-logo.jpg" alt="auca logo" width="60" height="60">
       <span>Adventist University of Central Africa</span>
-
     </div>
 
-    <ul class="nav-links">
+    <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+    </button>
+
+    <ul class="nav-links" id="primary-navigation">
       <li><a href="#">Home</a></li>
       <li class="dropdown">
         <a href="#">About</a>
@@ -28,14 +37,13 @@
       </li>
 
       <li class="dropdown">
-        <a href="#">Admissions ▾</a>
+        <a href="#">Services▾</a>
         <ul class="dropdown-menu">
-          <li><a href="#announcements">Announcements</a></li>
+          <li><a href="#announcements">Campus Information </a></li>
           <li><a href="#services">Student Services</a></li>
         </ul>
       </li>
 
-      <li><a href="#services">Services</a></li>
       <li><a href="#announcements">Notices</a></li>
 
     </ul>
@@ -43,10 +51,6 @@
 
 
   </nav>
-  <div class="top-bar">
-    <span>March Intake 2026 is now open for applications!</span>
-    <span>Contact: +250 724796988</span>
-  </div>
   <section id="intro" class="hero">
   <div class="hero-overlay"></div>
 
@@ -118,24 +122,25 @@
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-image card-image--placeholder">
-          <span>🏥</span>
-        </div>
-        <div class="card-body">
-          <div class="card-icon">🏥</div>
-          <h3 class="card-title">Health Center</h3>
-          <p class="card-text">
-            Confidential medical consultations and basic treatment
-            for all enrolled students. Open daily 8am–6pm.
-          </p>
-          <span class="card-tag">Health</span>
-        </div>
-      </div>
+  <div class="card">
+  <div class="card-image">
+    <img src="images/aucaRoom.jpg" alt="AUCA classroom" />
+  </div>
+  <div class="card-body">
+    <div class="card-icon">📚</div>
+    <h3 class="card-title">Classroom</h3>
+    <p class="card-text">
+      Modern, spacious classrooms designed to support interactive learning. 
+      Equipped with projectors, comfortable seating, and a collaborative atmosphere 
+      that encourages student engagement and academic excellence.
+    </p>
+    <span class="card-tag">Education</span>
+  </div>
+</div>
 
       <div class="card">
-        <div class="card-image card-image--placeholder">
-          <span>🍽️</span>
+        <div class="card-image">
+             <img src="images/cafetariaauca.jpg" alt="AUCA cafeteria" />
         </div>
         <div class="card-body">
           <div class="card-icon">🍽️</div>
@@ -149,8 +154,8 @@
       </div>
 
       <div class="card">
-        <div class="card-image card-image--placeholder">
-          <span>🏦</span>
+        <div class="card-image">
+          <img src="images/aucaregister.jpg" alt="Finance Office" />
         </div>
         <div class="card-body">
           <div class="card-icon">🏦</div>
@@ -164,9 +169,10 @@
       </div>
 
       <div class="card">
-        <div class="card-image card-image--placeholder">
-          <span>📝</span>
+          <div class="card-image">
+          <img src="images/Registerofficeauca.jpg" alt="Registrar Office" />
         </div>
+        
         <div class="card-body">
           <div class="card-icon">📝</div>
           <h3 class="card-title">Registrar</h3>
@@ -270,7 +276,7 @@
           <h4 class="notice-title">Wi-Fi Maintenance</h4>
           <p class="notice-text">
             Campus Wi-Fi will be unavailable on
-            <strong>Saturday March 22</strong>
+            <strong>Sunday March 22</strong>
             from 10pm–2am for upgrades.
           </p>
         </div>
@@ -280,15 +286,15 @@
       <div class="announcements-feed">
 
         <article class="announcement announcement--new">
-          <div class="ann-date">Mar 19, 2026</div>
+          <div class="ann-date">November 30, 2026</div>
           <h4 class="ann-title">
             🎓 Graduation Ceremony — Class of 2026
           </h4>
           <p class="ann-body">
             The graduation ceremony for the Class of 2026 will
-            be held on Saturday, May 17, 2026 at the AUCA
+            be held on Saturday, November 30, 2026 at the AUCA
             Amphitheater. All graduating students must collect
-            their gowns from the Registrar by May 10.
+            their gowns from the Registrar by November 10.
           </p>
           <span class="ann-tag">Academic Affairs</span>
         </article>
@@ -411,6 +417,27 @@
     </p>
   </div>
 </footer>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    navLinks.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+</script>
+
 
 
 

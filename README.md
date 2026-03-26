@@ -1,22 +1,27 @@
-# Campus Information Website
+# Campus Website 
 
-## Description
-A responsive, single-page website built for the CSS Layout & Positioning Practical Assignment. This project demonstrates various layout techniques (Grid, Flexbox), positioning behaviors (Sticky), and responsive design principles for displaying campus-related information.
+##  Introduction
+This is a clean, responsive informational website created for the Adventist University of Central Africa campus. It’s designed to look great on desktop and mobile, while keeping the interface simple and easy to browse.
 
-## Layout and Responsiveness Behaviors Demonstrated
-- **Navigation Bar**: Flexbox layout, sticky positioning, responsive stacking on mobile.
-- **Introduction**: Centered text layout with a structured list of features.
-- **Campus Services**: Flexbox grid adapting from multi-column layout on desktop to single column on mobile. Hover animations included.
-- **Campus Locations**: CSS Grid layout for images, adapting to fewer columns on small screens.
-- **Announcements**: Sticky positioning element that remains visible on scroll for desktop, static on mobile to prevent blocking content.
-- **Display Behavior**: Demonstrates `display: block`, `display: inline-block`, and `display: none` (hidden on mobile).
+## Goal
+Build a user-friendly landing page that showcases:
+- Campus news and announcements
+- Core student services (library, IT support, cafeteria, finance, registrar)
+- Campus maps and facilities
+- Quick-access campus resources
 
-## Project Files
-- `index.html`: The main structured HTML document containing semantic elements.
-- `style.css`: The external stylesheet containing all visual designs, layout properties, and media queries.
-- `README.md`: Project documentation.
-- `images/`: Directory containing project assets like the campus logo.
+It also demonstrates responsive UI patterns like sticky navigation, dropdown menus, and mobile hamburger menu behavior.
 
-## Student Info
-Student Name: [Your Name]
-Course/Student ID: [Your ID]
+## What’s Included
+- `index.html` — the full page structure using semantic HTML sections and navigation
+- `style.css` — all styling rules for colors, layout, spacing and responsive breakpoints
+- `images/` — visual assets for AUCA, buildings, and community spaces
+- `README.md` — this friendly guide
+
+##  Responsive Features
+- Desktop: navigation shown in row, with dropdown sub-menus and sticky top positioning
+- Tablet/mobile: collapsible hamburger menu, vertical link stack, touch-friendly spacing
+- Hidden/visible sections adapt to smaller screens for a smooth reading experience
+
+
+
