@@ -801,3 +801,20 @@ body {
     padding: 56px 0;
   }
 }
+
+.footer {
+  background-color: #1e3a6e;
+  padding: 24px 0;
+}
+
+.footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.92rem;
+}
